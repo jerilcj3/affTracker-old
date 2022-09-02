@@ -1,0 +1,47 @@
+{
+  "success": true,
+  "data": {
+    "campaign_name": "Test Campaign 23",
+    "created_at": "2022-09-02T18:29:31.744Z",
+    "ad_angle": "Holistic Digital Transformation",
+    "traffic_source": "adwords",
+    "landing_pages": [
+      {
+        "lander_angle": "Holistic Digital Transformation in 80 days",
+        "lander_url": "http://google.com",
+        "_id": "63124b8b702bbaa6174e0414"
+      },
+      {
+        "lander_angle": "Holistic Digital Transformation in 70 days",
+        "lander_url": "http://facebook.com",
+        "_id": "63124b8b702bbaa6174e0415"
+      }
+    ],
+    "thank_you_page": "http://thankyou.com",
+    "offer_pages": [
+      {
+        "offer_name": "Offer for roofing",
+        "offer_url": "http://roofing.com",
+        "offer_network": "clickdealer",
+        "_id": "63124b8b702bbaa6174e0416"
+      }
+    ],
+    "sequence_pages": [
+      {
+        "sequence_page_name": "sequence page 1",
+        "sequence_page_url": "http://sequence1.com",
+        "_id": "63124b8b702bbaa6174e0417"
+      }
+    ],
+    "tracking_tokens": [
+      {
+        "token_name": "adgroup_id",
+        "token_string": "ad_group",
+        "token_query": "{adgroup}",
+        "_id": "63124b8b702bbaa6174e0418"
+      }
+    ],
+    "_id": "63124b8b702bbaa6174e0413",
+    "__v": 0
+  }
+}
