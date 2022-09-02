@@ -6,7 +6,7 @@ const CampaignSchema = new mongoose.Schema({
     /* The name of this pet */
 
     type: String,
-    required: [true, 'Please provide a name for this pet.'],
+    required: [true, 'Please provide a name for this Campaign.'],
     maxlength: [60, 'Name cannot be more than 60 characters'],
   },  
 })
