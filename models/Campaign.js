@@ -95,6 +95,10 @@ const CampaignSchema = new mongoose.Schema({
       },
     },
   ],
+  campaign_url: {
+    type: String,
+    maxlength: [460, "Name cannot be more than 60 characters"],
+  },
 });
 
 export default mongoose.models.Campaign ||
