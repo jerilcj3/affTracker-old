@@ -41,6 +41,7 @@
         "_id": "63124b8b702bbaa6174e0418"
       }
     ],
+    "campaign_url": "http://localhost:3000/api/tracker?id=5eacda60-34b5-45b5-b939-939db2b6b6e0&ad_group={adgroup}&ad_city={adgroupcity}&ad_country={adgroupcountry}",
     "_id": "63124b8b702bbaa6174e0413",
     "__v": 0
   }

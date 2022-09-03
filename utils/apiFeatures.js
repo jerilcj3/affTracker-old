@@ -4,6 +4,10 @@
 
 //pagination functionality
 
+//generateCurrentDate functionality
+
+//generate UUID functionality
+
 //generateCampaignURL functionality
 
 import { v4 as uuidv4 } from "uuid";
@@ -15,7 +19,7 @@ class APIFeatures {
   }
 
   //generates the now date
-  generateCurrentDate(){
+  generateCurrentDate() {
     return new Date();
   }
 
