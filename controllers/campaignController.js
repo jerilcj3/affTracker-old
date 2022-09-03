@@ -1,5 +1,4 @@
 import Campaign from "../models/Campaign";
-import { v4 as uuidv4 } from "uuid";
 import APIFeatures from "../utils/apiFeatures";
 
 const showAllCampaigns = async (req, res) => {
@@ -14,18 +13,16 @@ const showAllCampaigns = async (req, res) => {
 };
 
 const createACampaign = async (req, res) => {
-  const uuid = uuidv4();
-  const created_at = new Date();
-
   //class which generates campaign URL
+  //params passed - tracking tokens and hostname from http body
   const apiFeatures = new APIFeatures(
-    uuid,
-    req.body.tracking_tokens
-  ).generateCampaignURL();
+    req.body.tracking_tokens,
+    req.headers.host
+  );
 
-  const URL = apiFeatures.URL;
-
-  console.log(URL);
+  const campaign_url = apiFeatures.generateCampaignURL();
+  const uuid = apiFeatures.generateUUID();
+  const created_at = apiFeatures.generateCurrentDate();
 
   try {
     //extract from http body
@@ -40,6 +37,7 @@ const createACampaign = async (req, res) => {
       tracking_tokens,
     } = req.body;
 
+    //insert values to mongodb
     const campaign = await Campaign.create({
       uuid,
       campaign_name,
@@ -51,6 +49,7 @@ const createACampaign = async (req, res) => {
       offer_pages,
       sequence_pages,
       tracking_tokens,
+      campaign_url,
     }); /* create a new model in the database */
     res.status(201).json({ success: true, data: campaign });
   } catch (error) {
