@@ -1,6 +1,6 @@
-import dbConnect from "../../config/dbConnect";
+import dbConnect from "../../../config/dbConnect";
 import nc from "next-connect";
-import {showAllCampaigns, createACampaign} from '../../controllers/campaignController'
+import {showAllCampaigns, createACampaign} from '../../../controllers/campaignController'
 
 dbConnect();
 
